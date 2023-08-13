@@ -6,28 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./calculator.component.scss']
 })
 export class CalculatorComponent {
-  firstNo: string = '';
-  secondNo: string = '';
-  operation: string = '';
-  ans: string = '';
-  calculate() {
-    let ans: number;
-    switch (this.operation) {
-      case '+':
-        ans = parseInt(this.firstNo) + parseInt(this.secondNo);
-        break;
-      case '-':
-        ans = parseInt(this.firstNo) - parseInt(this.secondNo);
-        break;
-      case '*':
-        ans = parseInt(this.firstNo) * parseInt(this.secondNo);
-        break;
-      case '/':
-        ans = parseInt(this.firstNo) / parseInt(this.secondNo);
-        break;
-      default :
-      ans = 0;
-    }
-    this.ans=ans.toString();
+  firstNo:string='';
+  secondNo:string='';
+  operation:string='';
+  ans:string='';
+
+  onCalculate(data:any){
+    this.firstNo = data.firstNo;
+    this.secondNo = data.secondNo;
+    this.operation = data.operation;
+    this.ans = data.ans;
   }
 }

@@ -7,12 +7,14 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { CalcResultsComponent } from './calc-results/calc-results.component';
+import { CalcFormComponent } from './calc-form/calc-form.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CalculatorComponent,
-    CalcResultsComponent
+    CalcResultsComponent,
+    CalcFormComponent
   ],
   imports: [
     BrowserModule,
