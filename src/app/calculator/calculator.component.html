@@ -21,10 +21,10 @@
         <input type="text"
         placeholder="Ans" [value]="ans">
     </div>
-    <div>
-        <p>the first number entered : {{firstNo}}</p>
-        <p>the operation selected : {{operation}}</p>
-        <p>the second number entered : {{secondNo}}</p>
-        <p>the ans obtained : {{ans}}</p>
-    </div>
+    <app-calc-results
+        [first]="firstNo"
+        [second]="secondNo"
+        [ops]="operation"
+        [ans]="ans">
+    </app-calc-results>
 </div>
