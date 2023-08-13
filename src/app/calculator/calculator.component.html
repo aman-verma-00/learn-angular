@@ -1,0 +1,30 @@
+<h2>Calculator</h2>
+<div>
+    <div>
+        <input type="text"
+        placeholder=" Enter 1st no"
+        [(ngModel)]="firstNo">
+        <select [(ngModel)]="operation">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <input type="text"
+        placeholder="Enter 2nd No"
+        [(ngModel)]="secondNo">
+    </div>
+    <div>
+        <button (click)="calculate()">Calculate</button>
+    </div>
+    <div>
+        <input type="text"
+        placeholder="Ans" [value]="ans">
+    </div>
+    <div>
+        <p>the first number entered : {{firstNo}}</p>
+        <p>the operation selected : {{operation}}</p>
+        <p>the second number entered : {{secondNo}}</p>
+        <p>the ans obtained : {{ans}}</p>
+    </div>
+</div>
